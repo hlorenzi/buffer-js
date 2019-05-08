@@ -1,0 +1,16 @@
+{
+  "name": "@hlorenzi/buffer",
+  "version": "1.0.0",
+  "description": "Utilities for working with buffer arrays.",
+  "repository": "github:hlorenzi/buffer-js",
+  "homepage": "https://github.com/hlorenzi/buffer-js#readme",
+  "bugs": "https://github.com/hlorenzi/buffer-js/issues",
+  "keywords": ["buffer", "array", "reader", "byte", "binary"],
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --experimental-modules test.mjs"
+  },
+  "author": "hlorenzi",
+  "license": "ISC"
+}
