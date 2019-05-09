@@ -343,4 +343,24 @@ export default class BufferReader
 		
 		return str
 	}
+	
+	
+	readUtf16LELength(lengthIn16BitUnits)
+	{
+		let str = ""
+		for (let i = 0; i < lengthIn16BitUnits; i++)
+			str += String.fromCharCode(this.readUint16LE())
+		
+		return str
+	}
+	
+	
+	readUtf16BELength(lengthIn16BitUnits)
+	{
+		let str = ""
+		for (let i = 0; i < lengthIn16BitUnits; i++)
+			str += String.fromCharCode(this.readUint16BE())
+		
+		return str
+	}
 }

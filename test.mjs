@@ -310,3 +310,23 @@ import { BufferReader } from "./index"
 		assert.throws(() => r.readUint8())
 	}
 }
+
+{	
+	const arr = [0x00, 0x61, 0x30, 0x42, 0xd8, 0x0c, 0xdd, 0x43]
+	
+	{
+		const r = new BufferReader(arr)
+		assert.equal("a\u3042\u{13143}", r.readUtf16BELength(4))
+		assert.throws(() => r.readUint8())
+	}
+}
+
+{	
+	const arr = [0x61, 0x00, 0x42, 0x30, 0x0c, 0xd8, 0x43, 0xdd]
+	
+	{
+		const r = new BufferReader(arr)
+		assert.equal("a\u3042\u{13143}", r.readUtf16LELength(4))
+		assert.throws(() => r.readUint8())
+	}
+}

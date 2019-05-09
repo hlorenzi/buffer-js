@@ -74,4 +74,8 @@ BufferReader#readManyFloat64(count)
 // Read ASCII-encoded strings
 BufferReader#readAsciiLength(lengthInBytes)
 BufferReader#readAsciiZeroTerminated()
+
+// Read UTF-16-encoded strings
+BufferReader#readUtf16LELength(lengthIn16BitUnits)
+BufferReader#readUtf16BELength(lengthIn16BitUnits)
 ```
