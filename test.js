@@ -1,5 +1,5 @@
 import assert from "assert"
-import { BufferReader } from "./index"
+import { BufferReader } from "./index.js"
 
 
 {
